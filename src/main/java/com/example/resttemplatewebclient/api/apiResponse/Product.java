@@ -1,5 +1,6 @@
 package com.example.resttemplatewebclient.api.apiResponse;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,12 +12,14 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Product {
 
+    private Long id;
     private String title;
     private String description;
     private BigDecimal price;
-    private Double discountedPercentage;
+    private float discountPercentage;
     private Double rating;
     private Integer stock;
     private String brand;

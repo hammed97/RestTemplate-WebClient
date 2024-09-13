@@ -4,5 +4,6 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class Image {
+
     private String url;
 }
